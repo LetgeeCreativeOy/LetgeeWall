@@ -1,0 +1,12 @@
+{% extends 'wall/base.html' %}
+{% block title %}Events{% endblock %}
+
+{% block content %}
+	
+	{% if events %}
+		{% for event in events %}
+	   		<a href="/wall/event/{{event.url_name}}">{{event.name}}</a><br>
+		{% endfor %}
+	{% endif %}
+
+{% endblock content %}

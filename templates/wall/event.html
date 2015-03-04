@@ -1,0 +1,22 @@
+{% extends 'wall/base.html' %}
+{% block title %}{{event.name}}{% endblock %}
+
+{% block content %}
+	
+	<h1>{{event.name}}</h1>
+	<h2>{{event.description}}</h2>
+	<h3>#{{event.hashtag}}</h3>
+
+	<div>
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{message.sender}}:</p>
+				<b><p>{{message.message}}</p></b>
+			{% endfor %}
+		{% else %}
+			<p>No messages</p>
+		{% endif %}
+
+	</div>
+
+{% endblock content %}
