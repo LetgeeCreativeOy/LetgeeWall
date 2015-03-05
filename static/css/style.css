@@ -1,19 +1,325 @@
-* {
-	margin: 0;
-	padding: 0;
 
-	font-family: monospace;
-	color: #fff;
+@media all and (max-width: 900px) {
+    
+	#main_header nav a {
+        font-size: 70%;
+        padding: 0;
+        
+        margin: 0;
+        
+        width: 30%;
+        
+    }
+}
+
+@media all and (min-width: 900px) {
+    
+	#main_header nav a {
+        font-size: 150%;
+        padding: 4px 2px;
+        margin: 1%;
+        
+        width: 30%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    
+    /*outline: 1px solid red;*/
 }
 
 html {
-	width: 100%;
-	height: 100%;
+
+    width: 100%;
+    height: 100%;
 }
 
 body {
-	width: inherit;
-	height: inherit;
 
-	background: #000;
+    width: inherit;
+    height: inherit;
+
+    background: #CDEB8B;
 }
+
+/*
+
+display
+position
+top / bottom ....
+margins / paddings
+heigth 
+width
+background
+color
+font...
+
+/////COLORS/////
+
+Shiny Plata [#EEEEEE]
+White [#FFFFFF]
+Magnolia Rosa [#F9F7ED]
+Interactive action Amarillo [#FFFF88]
+Qoop Verde [#CDEB8B]
+Gmail Azul [#C3D9FF]
+Shadows Gris [#36393D]
+
+
+*/
+
+#wrapper{
+    
+    position: relative;
+	
+	min-width: 720px;
+	min-height: 100%;
+    
+}
+
+#main_header{
+
+    display: block;
+    position: relative;
+    
+    top: 0;
+    
+    height: 94px;
+    width: 100%;
+    background: #EEEEEE;
+    
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    
+    
+    z-index: 9999;
+}
+
+#main_header nav {
+    display: block;
+    position: relative;
+    
+    height: 100%;
+    
+    list-style: none;
+    margin: auto;
+    
+    
+}
+
+#main_header nav a {
+    float: left;
+    display: inline;
+    position: relative;
+    
+    top: 25%;
+
+    text-align: center;
+    
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+
+/*
+#main_header nav a:link, #main_header nav a:visited {
+    display: inline-block;
+    color: #303030;
+    padding: 10px 40px;
+    height: 20px;
+}
+
+#main_header nav a:hover, #main_header nav a:active, #main_header nav .active a:link, #main_header nav .active a:visited {
+    text-shadow: none;
+    color: #FF9933;
+}*/
+
+#menu_left{
+
+    height: 100%;
+    width: 35%;
+
+    float: left;
+
+}
+
+#menu_right{
+
+    height: 100%;
+    width: 35%;
+
+    float: right;
+
+}
+
+#logo{
+
+    height: 100%;
+    width: 30%;
+    
+    float: left;
+    
+    background: inherit;
+    text-align: center;
+    
+    margin: auto;
+    vertical-align: middle;
+
+}
+
+#logo img{
+
+    position: relative;
+    width: auto;
+    height: 60%;
+    padding: 2.5%;
+}
+
+#main_wall{
+
+   	display: block;
+	position: relative;
+
+	margin: auto;
+	padding-top: 2.5%;
+	padding-bottom: 112px;
+
+	width: 100%;
+	min-height: 256px;
+
+	background: #CDEB8B;
+
+}
+
+.entry{
+
+    min-width: 126px;
+    max-width: 600px;
+    min-height: 64px;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 0.5%;
+    
+    
+    border-radius: 5px;
+
+}
+
+.entry .content {
+    display: inline-block;
+    position: relative;
+    
+    width: calc(100% - 15%);
+    margin-left: 2%;
+}
+
+.entry .content .author {
+    display: block;
+    position: relative;
+    
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.entry .content .message {
+    font-size: 100%;
+    padding: 2px;
+    
+    text-align: justify;
+}
+
+
+.entry img{
+    
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding-right: 0.5%;
+    
+    height: 62px;
+    width: 62px;
+}
+
+#main_footer{
+    
+    display: block;
+	position: absolute;
+
+	left: 0%;
+	bottom: 0%;
+
+	margin: auto;
+	margin-top: 8px;
+
+	width: 100%;
+	height: 86px;
+
+	background: rgba(110, 110, 255, 1);
+	
+	box-shadow: 0px 0px 6px 0px #000;
+	
+}
+
+#custom_panel{
+
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background: #FFF5EE;
+
+}
+
+#info_footer{
+
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: inherit;
+
+}
+
+#logo_footer{
+
+    margin: auto;
+    width: 30%;
+    background: inherit;
+    height: 60%;
+    
+    padding: 0.5%;
+
+}
+
+#logo_footer img{
+
+    height: 40px;
+    width: auto;
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#menu_footer{
+    position: relative;
+    display: block;
+    padding-top: 16px;
+    position: relative;
+    text-align: center;
+    
+    margin: auto;
+    
+    background: inherit;
+}
+
+#menu_footer a{
+    padding-right: 4px;
+    padding-left: 4px;
+    text-decoration: none;
+    color: #36393D;
+    display: inline;
+}
+

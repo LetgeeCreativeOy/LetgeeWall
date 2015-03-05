@@ -1,22 +1,25 @@
 {% extends 'wall/base.html' %}
 {% block title %}{{event.name}}{% endblock %}
+{% block logo_url %}{{event.logo_url}}{% endblock %}
+{% block logo_url_2 %}{{event.logo_url}}{% endblock %}
 
-{% block content %}
-	
-	<h1>{{event.name}}</h1>
-	<h2>{{event.description}}</h2>
-	<h3>#{{event.hashtag}}</h3>
+{% block messages %}
+	{% if messages %}
+		{% for message in messages %}
+			<div class="entry">
+							    
+			    <img src="https://avatars3.githubusercontent.com/u/8705852"></img>
+			    
+			    <div class="content">
+			        <div class="author">{{ message.sender }}</div>
+			        <!-- Testing with 140 chars-->
+			        <div class="message">{{ message.message }}</div>
+			    </div>
+				
+			</div>
+		{%endfor%}
+	{% else %}
+		<h1>No messages</h1>
+	{% endif %}
 
-	<div>
-		{% if messages %}
-			{% for message in messages %}
-				<p>{{message.sender}}:</p>
-				<b><p>{{message.message}}</p></b>
-			{% endfor %}
-		{% else %}
-			<p>No messages</p>
-		{% endif %}
-
-	</div>
-
-{% endblock content %}
+{% endblock %}
